@@ -1,5 +1,7 @@
 CHANGELOG
 
+Modified WordPress cookbook to use specific dependencies.
+
 v3.0.0 (2015-02-24)
 -------------------
 * Cookbook updated to support the MySQL 6.0 community cookbook
