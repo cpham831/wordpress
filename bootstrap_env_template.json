@@ -1,0 +1,17 @@
+{
+	"wordpress" : {
+		"db" : {
+			"root_password" : "db_root_password",
+			"instance_name" : "db_instance_name",
+			"name" : "db_name",
+			"user" : "username",
+			"pass" : "password",
+			"prefix" : "table_prefix",
+			"host" : "db_host",
+			"port" : "db_port",
+			"charset" : "utf8",
+			"collate" : "",
+			"web_hosts" : [ "web_hosts_to_connect_to_db" ]
+ 		}
+	}
+}

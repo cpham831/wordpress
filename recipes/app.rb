@@ -17,7 +17,22 @@
 # limitations under the License.
 #
 
-include_recipe "wordpress::database"
+#include_recipe "wordpress::database"
+if node['platform_family'] == 'rhel'
+  execute 'Apache Outbound' do
+	command 'setsebool -P httpd_can_network_connect=1'
+  end
+end
+
+unless platform_family?('windows')
+  mysql_client 'default' do
+    action :create
+  end
+end
+
+mysql2_chef_gem 'default' do
+  action :install
+end
 
 ::Chef::Recipe.send(:include, Opscode::OpenSSL::Password)
 node.set_unless['wordpress']['keys']['auth'] = secure_password

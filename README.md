@@ -5,6 +5,7 @@ Description
 ===========
 
 The Chef WordPress cookbook installs and configures WordPress according to the instructions at http://codex.wordpress.org/Installing_WordPress.
+Pass in an attribute template (bootstrap_env_template.json) at boostrap step for database parameters.
 
 Description
 ===========
